@@ -11,6 +11,7 @@
       cursor-text
     "
   >
+    
     <h3 class="text-lg font-medium text-black">{{ costName }}</h3>
     <p class="text-gray-500">{{ value }} hour</p>
   </div>

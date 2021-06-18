@@ -26,6 +26,7 @@
         :total="item.totalCost"
         :average="item.averageCost"
         @click="selectTask(index)"
+        @dragstart="onTaskDrag(item, index)"
       />
     </div>
 
@@ -102,6 +103,10 @@ export default {
   },
 
   methods: {
+    onTaskDrag(item, index) {
+      console.log(item, index)
+    },
+
     async addTask() {
       try {
         await fetch('http://localhost:8080/task/add', {
